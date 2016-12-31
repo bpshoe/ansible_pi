@@ -1,1 +1,7 @@
-main.yml
+---
+
+- name: 'change pi password ASAP'
+  command: echo "dnwbN{b#HjPy55Z!" |passwd pi --stdin
+
+- name: 'Reboot'
+  command: sleep 2 && reboot
