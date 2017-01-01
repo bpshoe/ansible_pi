@@ -5,5 +5,3 @@
   hosts: all
   roles:
     - common
-  vars_files:
-  	- group_vars/ansible_pi
