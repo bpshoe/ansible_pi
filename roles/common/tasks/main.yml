@@ -3,5 +3,10 @@
 - name: 'change pi password ASAP'
   command: echo "dnwbN{b#HjPy55Z!" |passwd pi --stdin
 
+- name: 'add new user'
+  command: sudo useradd -m -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi chickenmcnoggin
+
+
+
 - name: 'Reboot'
   command: sleep 2 && reboot
