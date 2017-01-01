@@ -19,7 +19,13 @@
   apt:
     upgrade: dist
 
-#ssh-copy-id example_user@203.0.113.10 add authorized key
+- authorized_key:
+    user: chickenmcnoggin
+    state: present
+    key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+
+#get password from input
+#get and change hostname from input
 #removepi user
 
 
