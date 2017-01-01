@@ -6,6 +6,21 @@
 - name: 'add new user'
   command: sudo useradd -m -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi chickenmcnoggin
 
+- name: Install the package "fail2ban"
+  apt:
+    name: fail2ban
+    state: present
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+
+#ssh-copy-id example_user@203.0.113.10 add authorized key
+#removepi user
 
 
 - name: 'Reboot'
