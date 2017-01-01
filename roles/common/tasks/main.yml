@@ -20,7 +20,7 @@
     groups: adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi
     append: yes
     update_password: on_create
-    password: {{password}}
+    password: "{{password}}"
 
 - name: add authorized key from bash on windows
   authorized_key:
