@@ -4,17 +4,17 @@
   apt:
     name: fail2ban
     state: present
-    become: true
+  become: true
 
 - name: Run the equivalent of "apt-get update" as a separate step
   apt:
     update_cache: yes
-    become: true
+  become: true
 
 - name: Update all packages to the latest version
   apt:
     upgrade: dist
-    become: true
+  become: true
 
 - name: add new user
   user:
@@ -24,18 +24,18 @@
     append: yes
     update_password: on_create
     password: "{{password}}"
-    become: true
+  become: true
 
 - name: add authorized key from bash on windows
   authorized_key:
     user: chickenmcnoggin
     state: present
     key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
-    become: true
+  become: true
 
 # Remove the user 'pi'
 - user:
     name: pi
     state: absent
     remove: yes
-    become: true
+  become: true
