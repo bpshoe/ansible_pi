@@ -1,8 +1,5 @@
 ---
 
-vars_files:
-  - group_vars/all
-
 - name: Install the package "fail2ban"
   apt:
     name: fail2ban
