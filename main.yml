@@ -6,4 +6,4 @@
   roles:
     - common
   vars_files:
-  	- group_vars/
+  	- group_vars/ansible_pi
