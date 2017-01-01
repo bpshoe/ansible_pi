@@ -13,12 +13,14 @@
   apt:
     upgrade: dist
 
-- name: 'add new user'
-  command: sudo useradd -m -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi chickenmcnoggin
-
-#get password from input
-#change password of chickenmcnoggin
-
+- name: add new user
+  user:
+    name: chickenmcnoggin
+    shell: /bin/bash
+    groups: adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi
+    append: yes
+    update_password: on_create
+    password: {{password}}
 
 - name: add authorized key from bash on windows
   authorized_key:
@@ -31,11 +33,3 @@
     name: pi
     state: absent
     remove: yes
-
-
-#get and change hostname from input
-#removepi user
-
-
-- name: 'Reboot'
-  command: sleep 2 && reboot
