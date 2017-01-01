@@ -1,1 +1,7 @@
-main.yml
+---
+
+- name: apply common configuration to all nodes
+  remote_user: pi
+
+  roles:
+    - common
