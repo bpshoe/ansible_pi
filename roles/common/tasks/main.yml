@@ -1,11 +1,5 @@
 ---
 
-- name: 'change pi password ASAP'
-  command: echo "dnwbN{b#HjPy55Z!" |passwd pi --stdin
-
-- name: 'add new user'
-  command: sudo useradd -m -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi chickenmcnoggin
-
 - name: Install the package "fail2ban"
   apt:
     name: fail2ban
@@ -19,12 +13,26 @@
   apt:
     upgrade: dist
 
-- authorized_key:
+- name: 'add new user'
+  command: sudo useradd -m -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi chickenmcnoggin
+
+#get password from input
+#change password of chickenmcnoggin
+
+
+- name: add authorized key from bash on windows
+  authorized_key:
     user: chickenmcnoggin
     state: present
     key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
 
-#get password from input
+# Remove the user 'pi'
+- user:
+    name: pi
+    state: absent
+    remove: yes
+
+
 #get and change hostname from input
 #removepi user
 

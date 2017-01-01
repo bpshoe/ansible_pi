@@ -1,0 +1,6 @@
+vars_prompt:
+    - name: "hostname"
+      prompt: "Enter the hostname of the Raspberry Pi"
+    - name: "enter chickenmcnoggin password"
+      prompt: "Enter password for chickenmcnoggin"
+      private: yes
