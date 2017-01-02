@@ -14,11 +14,9 @@
     
     - name: "password"
       prompt: "Enter password for chickenmcnoggin"
-      private: yes
 
     - name: "crazy_pi_password"
       prompt: "Enter password for default pi user"
-      private: yes
 
   roles:
     - common
