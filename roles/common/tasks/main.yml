@@ -34,5 +34,5 @@
     key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
   become: true
 
-  - name: Change pi password
-    user: name=pi update_password=always password= "{{crazy_pi_password}}"
+- name: Change pi password
+  user: name=pi update_password=always password= "{{crazy_pi_password}}"
