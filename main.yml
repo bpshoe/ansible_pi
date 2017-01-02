@@ -4,8 +4,13 @@
   remote_user: chickenmcnoggin
   hosts: all
   
-  vars_files:
-    - group_vars/all.yml
+  vars_prompt:
+    - name: "hostname"
+      prompt: "Enter the hostname of the Raspberry Pi"
+    
+    - name: "password"
+      prompt: "Enter password for chickenmcnoggin"
+      private: yes
 
   roles:
     - common
