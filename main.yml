@@ -5,7 +5,7 @@
   hosts: all
   
   vars_files:
-    - group_vars/all
+    - group_vars/all.yml
 
   roles:
     - common
