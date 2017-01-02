@@ -7,11 +7,17 @@
   vars_prompt:
     - name: "remote_user_var"
       prompt: "Enter the name of the remote user for ansible to connect with"
+      default: "pi"
+    
     - name: "hostname"
       prompt: "Enter the hostname of the Raspberry Pi"
     
     - name: "password"
       prompt: "Enter password for chickenmcnoggin"
+      private: yes
+
+    - name: "crazy_pi_password"
+      prompt: "Enter password for default pi user"
       private: yes
 
   roles:
