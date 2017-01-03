@@ -46,12 +46,11 @@
     key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
   become: true
 
-- name: cleanup
-  tasks:
-    - name: delete pi user
-      user:
-        name: pi
-        state: absent
-        remove: yes
-      become: yes
-      become_user: chickenmcnoggin
+- name: delete pi user
+  user:
+    name: pi
+    state: absent
+    remove: yes
+  become: yes
+  become_user: chickenmcnoggin
+
