@@ -1,7 +1,7 @@
 ---
 
 - name: apply common configuration to all nodes
-  remote_user: "{{remote_user_var}}"
+  remote_user: pi
   hosts: all
   
   vars_prompt:
@@ -15,10 +15,8 @@
     - name: "password"
       prompt: "Enter password for chickenmcnoggin"
 
-    - name: "crazy_pi_password"
-      prompt: "Enter password for default pi user"
-
   roles:
     - common
+  
   
   
