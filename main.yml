@@ -5,7 +5,7 @@
   hosts: all
   
   vars_prompt:
-
+        
     - name: "hostname"
       prompt: "Enter the hostname of the Raspberry Pi"
     
@@ -14,5 +14,5 @@
 
   roles:
     - common
-
+  
   
