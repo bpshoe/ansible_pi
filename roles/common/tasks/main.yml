@@ -47,4 +47,7 @@
   become: true
 
 - name: Change pi password
-  user: name=pi update_password=always password= "{{crazy_pi_password}}"
+  user: 
+    name: pi 
+    update_password: always 
+    password: "{{crazy_pi_password}}"
