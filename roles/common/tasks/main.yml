@@ -45,3 +45,5 @@
     state: present
     key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
   become: true
+
+- include: cleanup.yml
