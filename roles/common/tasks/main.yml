@@ -6,6 +6,18 @@
     state: present
   become: true
 
+- name: Install the package "vim"
+  apt:
+    name: vim
+    state: present
+  become: true
+
+- name: Install the package "git"
+  apt:
+    name: vim
+    state: present
+  become: true
+
 - name: Run the equivalent of "apt-get update" as a separate step
   apt:
     update_cache: yes
