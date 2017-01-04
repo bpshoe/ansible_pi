@@ -47,7 +47,7 @@
 
     - name: add new user
       user:
-        name: {{new_user}}
+        name: "{{new_user}}"
         shell: /bin/bash
         groups: adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi
         append: yes
@@ -57,7 +57,7 @@
 
     - name: add authorized key from bash on windows
       authorized_key:
-        user: {{new_user}}
+        user: "{{new_user}}"
         state: present
         key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
       become: true
