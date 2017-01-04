@@ -10,7 +10,7 @@
       prompt: "Enter the hostname of the Raspberry Pi"
     
     - name: "password"
-      prompt: "Enter password for chickenmcnoggin"
+      prompt: "enter salted pass for chickenmcnoggin (openssl passwd -salt <salt> -1 <plaintext>)"
 
   roles:
     - common
