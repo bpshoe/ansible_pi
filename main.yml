@@ -7,13 +7,13 @@
   vars_prompt:
         
     - name: "hostname"
-      prompt: "Enter the new hostname for the raspberry pi"
+      prompt: "hostname"
     
     - name: "new_user"
-      prompt: "username of the new user being created"
+      prompt: "username"
 
     - name: "password"
-      prompt: "enter salted pass for the new user (openssl passwd -salt <salt> -1 <plaintext>)"
+      prompt: "password (openssl passwd -salt <salt> -1 <plaintext>)"
 
   tasks:
     - name: Install the package "fail2ban"
