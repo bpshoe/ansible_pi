@@ -1,5 +1,6 @@
 loginto pi at keyboard
 enable the SSH server via raspi-config (advanced options>SSH) or your preferred method
+make sure you can successfully SSH from the ansible machine using pi/raspberry
 
 Run it:
 
