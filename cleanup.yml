@@ -6,6 +6,6 @@
   
   tasks:
     - user:
-      	name: pi
-      	state: absent
-      	remove: yes
+    	name: pi
+    	state: absent
+    	remove: yes
