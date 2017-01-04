@@ -7,7 +7,7 @@
   vars_prompt:
         
     - name: "hostname"
-      prompt: "Enter the hostname of the Raspberry Pi"
+      prompt: "Enter the new hostname for the raspberry pi"
     
     - name: "new_user"
       prompt: "username of the new user being created"
