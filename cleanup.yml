@@ -5,8 +5,7 @@
   hosts: all
   
   tasks:
-  - name: remove pi user
-    user:
-    	name: pi
-    	state: absent
-    	remove: yes
+    - user:
+      	name: pi
+      	state: absent
+      	remove: yes
