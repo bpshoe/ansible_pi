@@ -3,9 +3,10 @@
 - name: cleanup
   remote_user: chickenmcnoggin
   hosts: all
-  
+
   tasks:
-    - user:
-    	name: pi
-    	state: absent
-    	remove: yes
+    - name: Delete pi user
+      user:
+        name: ansible
+        state: absent
+        remove: yes
