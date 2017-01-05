@@ -22,18 +22,6 @@
         state: present
       become: true
 
-    - name: Install the package "vim"
-      apt:
-        name: vim
-        state: present
-      become: true
-
-    - name: Install the package "git"
-      apt:
-        name: vim
-        state: present
-      become: true
-
     - name: Run the equivalent of "apt-get update" as a separate step
       apt:
         update_cache: yes
@@ -54,12 +42,15 @@
         update_password: on_create
         password: "{{password}}"
       become: true
+    
 
-    - name: add authorized key
-      authorized_key:
-        user: "{{new_user}}"
-        state: present
-        key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
-      become: true
+    # This is highly reccomended over password logins
+    # change the path below to point to your public key
+    # - name: add authorized key
+    #   authorized_key:
+    #     user: "{{new_user}}"
+    #     state: present
+    #     key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+    #   become: true
   
   
